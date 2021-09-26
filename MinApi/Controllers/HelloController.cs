@@ -1,6 +1,7 @@
-﻿namespace MinApi;
+﻿namespace MinApi.Controllers;
 
-[ApiController("hello")]
+// Creates endpoint at https://localhost:5001/hello
+[ApiController("GET", "hello")]
 public class HelloController : IController
 {
     public string Invoked(HttpContext context)

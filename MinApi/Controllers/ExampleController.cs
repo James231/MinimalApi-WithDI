@@ -1,10 +1,13 @@
-﻿namespace MinApi;
+﻿using MinApi.Services;
+namespace MinApi.Controllers;
 
-[ApiController("example")]
+// Creates endpoint at https://localhost:5001/example
+[ApiController("GET", "example")]
 public class ExampleController : IController
 {
     public MyService MyService { get; set; }
 
+    // Custom service injected here.
     public ExampleController(MyService _myService)
     {
         MyService = _myService;
